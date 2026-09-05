@@ -1,0 +1,31 @@
+[settings]
+dotfiles.root = "~/.config/mise/dotfiles"
+dotfiles.default_mode = "symlink"
+
+[dotfiles]
+"~/.gitconfig" = {}
+"~/.config/zellij" = { mode = "symlink-each" }
+
+[bootstrap.repos]
+"~/.config/nvim" = { url = "https://github.com/kingbri1/kickstart.nvim" }
+
+[tools]
+cmake = "latest"
+deno = "latest"
+docker-cli = "latest"
+docker-compose = "latest"
+fd = "latest"
+ffmpeg = "latest"
+fzf = "latest"
+lazydocker = "latest"
+neovim = "latest"
+ninja = "latest"
+node = "lts"
+opencode = "latest"
+ripgrep = "latest"
+rust = "latest"
+starship = "latest"
+tree-sitter = "latest"
+uv = "latest"
+zellij = "latest"
+zoxide = "latest"

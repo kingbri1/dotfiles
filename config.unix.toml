@@ -1,0 +1,13 @@
+[dotfiles]
+"~/.zshrc" = {}
+"~/.config/ghostty" = { mode = "symlink-each" }
+"~/.zsh_plugins.txt" = {}
+
+[bootstrap.repos]
+"~/.antidote" = { url = "https://github.com/mattmc3/antidote" }
+
+[bootstrap.user]
+login_shell = "/bin/zsh"
+
+[tools]
+colima = "latest"
