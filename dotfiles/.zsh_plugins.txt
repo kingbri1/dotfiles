@@ -1,0 +1,15 @@
+# Helper functions & completion definitions
+zsh-users/zsh-completions
+
+# Completion UI
+Aloxaf/fzf-tab
+
+# Vi keybindings
+jeffreytse/zsh-vi-mode
+
+# Prompt behavior
+olets/zsh-transient-prompt kind:defer
+
+# Terminal enhancements
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
