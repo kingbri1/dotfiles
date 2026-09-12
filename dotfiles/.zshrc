@@ -32,10 +32,10 @@ TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character)'
 # Keybindings
 bindkey '^f' autosuggest-accept
 
-# # Auto-start zellij
-# if [[ -o interactive ]] \
-#     && [[ -z "$ZELLIJ" ]] \
-#     && [[ -z "$NO_ZELLIJ" ]] \
-#     && command -v zellij >/dev/null 2>&1; then
-#     zellij
-# fi
+# Auto-start zellij
+if [[ -o interactive ]] \
+    && [[ -z "$ZELLIJ" ]] \
+    && [[ -z "$NO_ZELLIJ" ]] \
+    && command -v zellij >/dev/null 2>&1; then
+    zellij
+fi

@@ -1,3 +1,16 @@
 [bootstrap.packages]
 "brew-cask:ghostty" = "latest"
 "brew:wget" = "latest"
+"brew-cask:android-platform-tools" = "latest"
+"brew:libusb" = "latest"
+"brew:xcode-build-server" = "latest"
+"brew:coreutils" = "latest"
+"brew:xcp" = "latest"
+
+[tools]
+xcbeautify = "latest"
+xcodegen = "latest"
+swiftformat = "latest"
+swiftlint = "latest"
+jq = "latest"
+"pipx:pymobiledevice3" = "latest"
