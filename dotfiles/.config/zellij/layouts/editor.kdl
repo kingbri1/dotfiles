@@ -10,12 +10,12 @@ layout {
 
     tab name="editor" focus=true hide_floating_panes=true {
         pane split_direction="vertical" {
-            pane command="zsh" size="75%" focus=true borderless=true {
-                args "-ic" "nvim; exec zsh"
+            pane command="zsh" size="70%" focus=true borderless=true {
+                args "-ic" "nvim \"$ZELLIJ_EDITOR_TARGET\"; exec zsh"
             }
 
-            pane command="zsh" size="25%" borderless=true {
-                args "-ic" "opencode; exec zsh"
+            pane command="zsh" size="30%" borderless=true {
+                args "-ic" "opencode --port 4096; exec zsh"
             }
         }
 

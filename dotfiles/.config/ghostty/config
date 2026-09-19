@@ -4,3 +4,5 @@
 font-size = 16
 macos-option-as-alt = true
 theme = Midnight Arcade
+keybind = cmd+c=copy_to_clipboard
+

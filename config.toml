@@ -2,6 +2,9 @@
 dotfiles.root = "~/.config/mise/dotfiles"
 dotfiles.default_mode = "symlink"
 
+[settings.npm]
+package_manager = "pnpm"
+
 [dotfiles]
 "~/.gitconfig" = {}
 "~/.config/zellij" = { mode = "symlink-each" }
@@ -29,4 +32,9 @@ tree-sitter = "latest"
 uv = "latest"
 zellij = "latest"
 zoxide = "latest"
+pnpm = "latest"
+
+# Other package managers
 "pipx:basedpyright" = "latest"
+"npm:typescript" = "7"
+"npm:tsx" = "latest"
