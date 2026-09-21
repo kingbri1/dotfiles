@@ -15,6 +15,15 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+zedit() {
+  local target="${1:-$PWD}"
+
+  if [[ -d "$target" ]]; then
+    target="$(cd "$target" && pwd)"
+  fi
+
+  ZELLIJ_EDITOR_TARGET="$target" zellij --layout editor
+}
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -39,3 +48,11 @@ if [[ -o interactive ]] \
     && command -v zellij >/dev/null 2>&1; then
     zellij
 fi
+
+# pnpm
+export PNPM_HOME='/Users/kingbri/Library/pnpm'
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
