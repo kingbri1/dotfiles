@@ -3,3 +3,5 @@
 	email = 8082010+kingbri1@users.noreply.github.com
 [core]
 	editor = nvim
+	autocrlf = input
+	eol = lf

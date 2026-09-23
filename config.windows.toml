@@ -1,0 +1,14 @@
+[dotfiles]
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = { }
+
+[bootstrap.repos]
+"~/AppData/Local/nvim" = { url = "https://github.com/kingbri1/kickstart.nvim" }
+
+[bootstrap.packages]
+"winget:Chocolatey.Chocolatey" = "latest"
+"winget:Microsoft.PowerShell" = "latest"
+"winget:Git.Git" = "latest"
+"scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+
+[env]
+SHELL = "pwsh"

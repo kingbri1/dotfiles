@@ -7,10 +7,13 @@ package_manager = "pnpm"
 
 [dotfiles]
 "~/.gitconfig" = {}
-"~/.config/zellij" = { mode = "symlink-each" }
 
-[bootstrap.repos]
-"~/.config/nvim" = { url = "https://github.com/kingbri1/kickstart.nvim" }
+[dotfiles.".config/zellij"]
+mode = "symlink-each"
+variants = [
+    { os = "windows", target = "~/AppData/Roaming/Zellij/config" },
+    { os = "unix", target = "~/.config/zellij" },
+]
 
 [tools]
 cmake = "latest"
