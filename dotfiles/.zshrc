@@ -2,7 +2,7 @@
 OLD_UMASK=$(umask)
 umask 022
 
-eval "$(/Users/kingbri/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
+eval "$($HOME/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
 
 # Antidote
 source $HOME/.antidote/antidote.zsh
