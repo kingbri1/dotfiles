@@ -1,3 +1,7 @@
+# Set umask to secure for compinit
+OLD_UMASK=$(umask)
+umask 022
+
 eval "$(/Users/kingbri/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
 
 # Antidote
@@ -49,10 +53,5 @@ if [[ -o interactive ]] \
     zellij
 fi
 
-# pnpm
-export PNPM_HOME='/Users/kingbri/Library/pnpm'
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end
+umask $OLD_UMASK
+unset OLD_UMASK

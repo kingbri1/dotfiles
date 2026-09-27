@@ -815,7 +815,7 @@ scroll_mode_sync false
 //   - "descend" (always control the nested session on focus)
 //   - "never" (never prompt or descend; do it manually)
 // 
-nested_session_handling "never"
+nested_session_handling "fullscreen"
  
 // Which escape sequence desktop notifications coming from panes are
 // forwarded to the host terminal with.
