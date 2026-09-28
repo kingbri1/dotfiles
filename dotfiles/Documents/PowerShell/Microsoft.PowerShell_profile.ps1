@@ -7,16 +7,26 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 # Be aware that if you are missing these lines from your profile, tab completion
 # for `choco` will not function.
 # See https://ch0.co/tab-completion for details.
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
+# $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+# if (Test-Path($ChocolateyProfile)) {
+#   Import-Module "$ChocolateyProfile"
+# }
 
+if (
+    -not [Console]::IsInputRedirected -and
+    -not [Console]::IsOutputRedirected -and
+    -not $env:ZELLIJ -and
+    -not $env:NO_ZELLIJ -and
+    (Get-Command zellij -ErrorAction SilentlyContinue)
+) {
+    zellij
+    exit
+}
 # Mise
 (&mise activate pwsh) | Out-String | Invoke-Expression
 
 # Starship
-Invoke-Expression (& 'C:\Users\kingbri\AppData\Local\mise\installs\starship\1.26.0\starship.exe' init powershell --print-full-init | Out-String)
+starship init powershell --print-full-init | Out-String | Invoke-Expression
 function Invoke-Starship-TransientFunction {
     &starship module character
 }
