@@ -430,13 +430,13 @@ plugins {
         tab_sync_indicator " "
 
         // Hostname
-        command_host_command "hostname -s"
+        command_host_command "hostname"
         command_host_format "{stdout}"
         command_host_interval "0"
         command_host_rendermode "static"
 
         // Focused pane directory
-        command_directory_command "sh -c 'basename \"$PWD\"'"
+        command_directory_command "pwd"
         command_directory_format "{stdout}"
         command_directory_interval "10"
         command_directory_rendermode "static"
