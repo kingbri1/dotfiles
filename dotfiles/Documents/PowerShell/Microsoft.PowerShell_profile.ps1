@@ -33,6 +33,24 @@ function Invoke-Starship-TransientFunction {
 
 Enable-TransientPrompt
 
+# fzf
+Import-Module PSFzf
+
+Set-PsFzfOption `
+    -PSReadlineChordProvider 'Ctrl+t' `
+    -PSReadlineChordReverseHistory 'Ctrl+r'
+
+# fzf-powered tab completion
+Set-PsFzfOption -TabExpansion
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock {
+    Invoke-FzfTabCompletion
+}
+
+# zoxide
+Invoke-Expression (& {
+    (zoxide init --cmd cd powershell | Out-String)
+})
+
 # Zellij editor
 function zedit {
     param(

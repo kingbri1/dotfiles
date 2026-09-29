@@ -9,6 +9,7 @@
 "winget:Microsoft.PowerShell" = "latest"
 "winget:Git.Git" = "latest"
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+"scoop:extras/psfzf" = "latest"
 
 [env]
 SHELL = "pwsh"
