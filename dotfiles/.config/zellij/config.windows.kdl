@@ -579,7 +579,7 @@ pane_frames false
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
-copy_command "pbcopy"
+// copy_command "clip.exe"
  
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
@@ -815,7 +815,7 @@ scroll_mode_sync false
 //   - "descend" (always control the nested session on focus)
 //   - "never" (never prompt or descend; do it manually)
 // 
-nested_session_handling "fullscreen"
+// nested_session_handling "descend"
  
 // Which escape sequence desktop notifications coming from panes are
 // forwarded to the host terminal with.
