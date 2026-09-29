@@ -436,7 +436,7 @@ plugins {
         command_host_rendermode "static"
 
         // Focused pane directory
-        command_directory_command "basename \"$PWD\""
+        command_directory_command "sh -c 'basename \"$PWD\"'"
         command_directory_format "{stdout}"
         command_directory_interval "10"
         command_directory_rendermode "static"
