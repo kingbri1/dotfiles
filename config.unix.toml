@@ -12,3 +12,8 @@ login_shell = "/bin/zsh"
 
 [tools]
 colima = "latest"
+
+[env]
+EDITOR = "nvim"
+VISUAL = "nvim"
+ZELLIJ_CONFIG_FILE = "{{ env.HOME }}/.config/zellij/config.unix.kdl"

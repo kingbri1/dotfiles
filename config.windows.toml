@@ -12,3 +12,4 @@
 
 [env]
 SHELL = "pwsh"
+ZELLIJ_CONFIG_FILE = "{{ env.APPDATA }}/Zellij/config/config.windows.kdl"
