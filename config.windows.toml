@@ -1,6 +1,16 @@
+[env]
+SHELL = "pwsh"
+ZELLIJ_CONFIG_FILE = "{{ env.APPDATA }}/Zellij/config/config.windows.kdl"
+
+[vars]
+mise_global_root = '{{ env.USERPROFILE }}\.config\mise'
+
 [dotfiles]
 "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = {}
 "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" = {}
+
+[bootstrap.hooks.pre-packages]
+run = "set PSModulePath=&& powershell.exe {{ vars.mise_global_root }}/windows/bootstrap.ps1"
 
 [bootstrap.repos]
 "~/AppData/Local/nvim" = { url = "https://github.com/kingbri1/kickstart.nvim" }
@@ -11,7 +21,3 @@
 "winget:Git.Git" = "latest"
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
 "scoop:extras/psfzf" = "latest"
-
-[env]
-SHELL = "pwsh"
-ZELLIJ_CONFIG_FILE = "{{ env.APPDATA }}/Zellij/config/config.windows.kdl"

@@ -12,16 +12,6 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 #   Import-Module "$ChocolateyProfile"
 # }
 
-if (
-    -not [Console]::IsInputRedirected -and
-    -not [Console]::IsOutputRedirected -and
-    -not $env:ZELLIJ -and
-    -not $env:NO_ZELLIJ -and
-    (Get-Command zellij -ErrorAction SilentlyContinue)
-) {
-    zellij
-    exit
-}
 # Mise
 (&mise activate pwsh) | Out-String | Invoke-Expression
 
@@ -109,3 +99,14 @@ function Enter-VsDev {
 }
 
 Set-Alias vsdev Enter-VsDev
+
+if (
+    -not [Console]::IsInputRedirected -and
+    -not [Console]::IsOutputRedirected -and
+    -not $env:ZELLIJ -and
+    -not $env:NO_ZELLIJ -and
+    (Get-Command zellij -ErrorAction SilentlyContinue)
+) {
+    zellij
+    exit
+}
